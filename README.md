@@ -1,24 +1,44 @@
 # scholar-tracker
 This repository will store the code needed to run a Discord Bot which automatically logs earnings from an arbitrary amount of scholars
 
-Users will be able to interact with the following commands in servers that host thescholar-tracker: 
+The typical flow for this Discord bot will be as follows: (1) A Voxie owner runs `!regOwner` to register themself into the database; (2) the Voxie owner runs `!AddScholar @Scholar1 @Scholar2 @ScholarN` to register each of their scholars to the database; (3) the Scholars then perform daily logs by calling the `!logScholar` command in the Discord, then responding to idnividual forms via DM's; (4) the Voxie owner can then request a print-out of their Statistics over DM's using `!dmLogs` or into the public chat using `!showLogs`. 
 
-
-```
-!getDegens
-```
-
-EXAMPLES:
+## Commands:
+Users will be able to interact with the following commands in servers that host the scholar-tracker:
 
 ```
-!honor 0x7daa42ac914a515cb6c3b1ac147e5b997abe3495985680fee392c52dfad6d1d7 0x01beda4693c0c5b06576555688193a0332017092adc71a63db298da6254cc388
+!regOwner
 ```
 ```
-!addWallets 0x6C485b8A1b5DE16Bd7De7Da6b90d88446B7aE824 0x1C233950Fb282F107c4710D05F4c0a10F31DcA46 0x8bEd15d3C26159f9512EdC2696B0292C9917ce56 0x8a04Df9205eFDB0C7434aBE33274117E881fd704
+!addScholar @Scholar1 @Scholar2 @ScholarN
 ```
-The AWS database will be used to keep a running tally of total ETH/NFT assets transacted so users can easily understand the reputation of any individual with which they are contemplating transacting with.
+```
+!logScholar
+```
+```
+!dmLogs
+```
+```
+!showLogs
+```
 
-GETTING STARTED
+
+
+### Examples:
+
+```
+!add-Scholar @Remista @f0rest @killmongerBR @davidsf @aqeoj @tuka
+```
+```
+!logScholar
+```
+If the Scholar is registered in the database, they will be DM'ed with a form to fill-out. The form will prompt the Scholar to enter the following information:
+Hours played: 
+$VOXEL earned in those hours:
+Number of Wins: (Optional)
+Number of Losses: (Optional)
+
+## GETTING STARTED
 
 Simply run the following command in the desired directory of choice:
 
@@ -26,7 +46,7 @@ Simply run the following command in the desired directory of choice:
 git clone https://github.com/Oreo-web3/scholar-tracker.git
 ```
 
-REQUIRED PACKAGES:
+### REQUIRED PACKAGES:
 
 The nft-honor-tracker requires the ethers.js, discord.js, aws-sdk.js, and dotenv API's in order to function properly. Please use the following commands to prepare an initially empty directory for the required dependencies using NPM:
 
