@@ -1,0 +1,30 @@
+{
+  "name": "nft-scholar-tracker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "scholar.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Oreo-web3/scholar-tracker.git"
+  },
+  "keywords": [
+    "scholar",
+    "tracker",
+    "NFT"
+  ],
+  "author": "Oreo-web3",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Oreo-web3/scholar-tracker/issues"
+  },
+  "homepage": "https://github.com/Oreo-web3/scholar-tracker#readme",
+  "dependencies": {
+    "aws-sdk": "^2.1181.0",
+    "discord.js": "^14.0.3",
+    "dotenv": "^16.0.1",
+    "ethers": "^5.6.9"
+  }
+}
